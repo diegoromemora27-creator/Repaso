@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repaso de HTML y CSS - Tarjeta de Perfil</title>
+    <!-- Vinculamos nuestro archivo CSS externo -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Etiqueta <main>: Contenedor principal de la página. Usamos una clase para darle estilos. -->
+    <main class="container">
+
+        <!-- Etiqueta <article>: Representa contenido independiente, en este caso nuestra tarjeta. -->
+        <article class="card">
+
+            <!-- Etiqueta <header>: Encabezado de la tarjeta -->
+            <header class="card-header">
+                <!-- Etiqueta <img>: Para imágenes. No necesita etiqueta de cierre. -->
+                <img src="https://via.placeholder.com/150" alt="Foto de perfil" class="profile-img">
+
+                <!-- Etiqueta <h1>: Título principal. Usamos un ID porque es único. -->
+                <h1 id="user-name">Ana Desarrolladora</h1>
+
+                <!-- Etiqueta <p>: Párrafo de texto. -->
+                <p class="subtitle">Estudiante de Programación</p>
+            </header>
+
+            <!-- Etiqueta <section>: Agrupa contenido temático de la tarjeta. -->
+            <section class="card-body">
+                <!-- Etiqueta <h3>: Subtítulos de tercer nivel. -->
+                <h3>Sobre mí</h3>
+                <p>¡Hola! Estoy aprendiendo a crear páginas web. Esta tarjeta es mi práctica para repasar los conceptos
+                    básicos de maquetación.</p>
+
+                <h3>Mis Tecnologías:</h3>
+                <!-- Etiqueta <ul>: Lista desordenada (con viñetas). -->
+                <ul class="skills-list">
+                    <!-- Etiqueta <li>: Elementos de la lista. -->
+                    <li>HTML5 (Estructura)</li>
+                    <li>CSS3 (Estilos)</li>
+                    <li>JavaScript (Interactividad)</li>
+                </ul>
+            </section>
+
+            <!-- Etiqueta <footer>: Pie de la tarjeta -->
+            <footer class="card-footer">
+                <!-- Etiqueta <button>: Botón interactivo. Tiene un ID para ser contactado fácilmente. -->
+                <button id="contact-btn">Contactar</button>
+            </footer>
+
+        </article>
+
+    </main>
+
+</body>
+
+</html>

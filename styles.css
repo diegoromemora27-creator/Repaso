@@ -1,0 +1,120 @@
+/* =========================================
+   REPASO DE SELECTORES Y PROPIEDADES CSS
+   ========================================= */
+
+/* 1. Selector Universal (*) 
+   Aplica a TODOS los elementos de la página. 
+   Se suele usar para reiniciar los márgenes y evitar diferencias entre navegadores. */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Incluye el padding dentro del ancho/alto total */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* 2. Selector de Etiqueta (body)
+   Aplica a todas las etiquetas <body>. */
+body {
+    background-color: #f0f2f5; /* Color de fondo gris claro */
+    color: #333;               /* Color de texto principal (gris oscuro) */
+}
+
+/* 3. Selector de Clase (.clase)
+   Aplica a cualquier elemento que tenga class="nombre-de-clase".
+   Es el selector más común y recomendado. */
+.container {
+    /* Usamos Flexbox para centrar contenido horizontal y verticalmente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* La altura mínima es el 100% de la ventana (Viewport Height) */
+}
+
+.card {
+    background-color: white;
+    width: 320px;
+    border-radius: 12px; /* Redondea las esquinas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Crea una sombra suave (X, Y, desenfoque, color) */
+    overflow: hidden; /* Evita que el contenido interno sobrepase las esquinas redondeadas */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Prepara una animación suave */
+}
+
+/* 4. Selector de Pseudo-clase (:estado)
+   Aplica estilos cuando el elemento está en un estado específico, como cuando el ratón pasa por encima. */
+.card:hover {
+    transform: translateY(-8px); /* Mueve la tarjeta ligeramente hacia arriba */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15); /* Aumenta la sombra para dar efecto de elevación */
+}
+
+/* Estilos combinados de clases */
+.card-header {
+    background-color: #4a90e2; /* Fondo azul */
+    color: white;
+    text-align: center; /* Centra el texto */
+    padding: 40px 20px 20px; /* Espaciado interno: arriba, lados, abajo */
+}
+
+.profile-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* 50% hace que una imagen cuadrada se vuelva un círculo perfecto */
+    border: 4px solid white; /* Borde blanco grueso alrededor de la foto */
+    margin-bottom: 10px; /* Margen exterior hacia abajo */
+}
+
+/* 5. Selector de ID (#id)
+   Aplica a un único elemento que tenga id="nombre-del-id". 
+   Tiene más peso/prioridad que las clases. */
+#user-name {
+    font-size: 1.5rem; /* Tamaño de fuente relativo */
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    font-size: 0.9rem;
+    opacity: 0.8; /* Hace el texto un poco transparente */
+}
+
+.card-body {
+    padding: 25px;
+}
+
+/* 6. Selector Descendente (ancestro descendiente)
+   Aplica solo a los <h3> que estén dentro de un elemento con la clase .card-body */
+.card-body h3 {
+    margin: 15px 0 10px;
+    color: #4a90e2; /* Azul para resaltar los subtítulos */
+    font-size: 1.1rem;
+}
+
+.skills-list {
+    list-style-type: square; /* Cambia el estilo de la viñeta de punto a cuadrado */
+    padding-left: 20px; /* Agrega espacio a la izquierda para que se vean las viñetas */
+}
+
+.skills-list li {
+    margin-bottom: 8px; /* Separa los items de la lista */
+    color: #555;
+}
+
+.card-footer {
+    padding: 10px 25px 30px;
+    text-align: center;
+}
+
+/* Otro uso de ID para el botón de llamada a la acción principal */
+#contact-btn {
+    background-color: #4a90e2;
+    color: white;
+    border: none; /* Quita el borde por defecto de los botones */
+    padding: 12px 25px;
+    font-size: 1rem;
+    border-radius: 25px; /* Bordes muy redondeados (forma de píldora) */
+    cursor: pointer; /* Cambia la flecha del ratón por una "manito" dando a entender que es clickeable */
+    font-weight: bold;
+    transition: background-color 0.2s; /* Animación de color suave */
+}
+
+#contact-btn:hover {
+    background-color: #357abd; /* Color azul más oscuro al pasar el ratón */
+}
